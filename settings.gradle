@@ -1,0 +1,4 @@
+rootProject.name = 'jerry-sso'
+include 'cas-client1'
+include 'cas-client2'
+include 'cas-server'

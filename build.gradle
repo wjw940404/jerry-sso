@@ -1,0 +1,15 @@
+description "jerry-sso"
+sourceCompatibility = 1.8
+allprojects{
+    group 'com.jerry.sso'
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${project.springBootVersion}"
+    }
+}
