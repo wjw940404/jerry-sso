@@ -23,7 +23,7 @@ keytool -exportcert -alias cas -keystore D:\jerry\cas-overlay-template\etc\cas\t
 
 命令： keytool -import -alias cas -keystore ./cacerts -file “D:\jerry\cas-overlay-template\etc\cas\cas.cer”
 
-4：将项目的整个etc文件夹拷贝到项目所在磁盘的根目录下（默认配置的文件路径）
+4：将项目的整个etc文件夹拷贝到项目所在磁盘的根目录下（默认配置文件设置的路径是在项目磁盘根目录下，可以自己修改）
 
 二、修改hosts文件（C:\Windows\System32\drivers\etc\hosts），加入下面的配置：
 127.0.0.1        cas.example.org
