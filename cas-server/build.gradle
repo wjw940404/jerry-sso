@@ -59,6 +59,8 @@ dependencies {
     compile "org.apereo.cas:cas-server-support-jdbc-drivers:${project.casVersion}"
     compile "mysql:mysql-connector-java:${project.'mysql.driver.version'}"
 
+    compile 'com.alibaba:fastjson:1.2.35'
+
 }
 
 task copyConfig(type: Copy, description: "Copy CAS configuration over to /etc/cas/config") {
