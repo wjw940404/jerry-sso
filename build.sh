@@ -23,16 +23,16 @@ function help() {
 }
 
 function clean() {
-	./gradlew :cas-server:clean "$@"
+	./gradlew :cas-server:clean
 }
 
 function package() {
-	./gradlew :cas-server:clean build "$@"
+	./gradlew :cas-server:clean build
 #	copy
 }
 
 function bootrun() {
-	./gradlew :cas-server:clean build bootRun -Pbootiful=true "$@"
+	./gradlew :cas-server:clean build bootRun -Pbootiful=true
 }
 
 function debug() {

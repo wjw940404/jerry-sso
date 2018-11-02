@@ -44,7 +44,6 @@ bootRun {
 }
 
 repositories {
-//    maven { url "http://maven.jeecg.org/nexus/content/repositories/jeecg"}
     mavenCentral()
     mavenLocal()
 }

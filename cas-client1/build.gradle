@@ -26,5 +26,8 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
     implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+
     compile 'com.alibaba:fastjson:1.2.35'
+
+    compile 'net.unicon.cas:cas-client-autoconfig-support:2.1.0-GA'
 }
