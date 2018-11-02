@@ -23,12 +23,18 @@ keytool -exportcert -alias cas -keystore D:\jerry\cas-overlay-template\etc\cas\t
 
 命令： keytool -import -alias cas -keystore ./cacerts -file “D:\jerry\cas-overlay-template\etc\cas\cas.cer”
 
-4：将项目的整个etc文件夹拷贝到项目所在磁盘的根目录下（默认配置的文件路径）
+4：将项目的整个etc文件夹拷贝到项目所在磁盘的根目录下（默认配置文件设置的路径是在项目磁盘根目录下，可以自己修改）
 
 二、修改hosts文件（C:\Windows\System32\drivers\etc\hosts），加入下面的配置：
 127.0.0.1        cas.example.org
 
-三、配置tomcat（在/conf/server.xml中编辑），需要tomcat9
+三、运行
+
+两种运行方式：
+
+1、使用外置tomcat，将cas-server打成war包并在tomcat中运行
+
+配置tomcat（在/conf/server.xml中编辑），需要tomcat9
 
 注释掉下面的配置：
 
@@ -45,7 +51,12 @@ keytool -exportcert -alias cas -keystore D:\jerry\cas-overlay-template\etc\cas\t
                keystoreFile="D:\etc\cas\thekeystore" keystorePass="changeit"
                clientAuth="false" sslProtocol="TLS"/>
                
-四、使用war命令打包，并将打包的文件放入tomcat中运行（或直接在idea里面执行run命令）
+使用war命令打包，并将打包的文件放入tomcat中运行（或直接在idea里面执行run命令）
 
-五、访问https://cas.example.org:8443/cas，如正常即显示cas登录页，用户名：casuser   密码：Mellon
+2、使用cas中内置的tomcat运行
+在项目根目录下，执行脚本命令build.sh run （可能需要修改build.sh里面的项目路径）
+
+四、访问 https://cas.example.org:8443/cas ，如一切正常即显示cas登录页，默认用户名：casuser，密码：Mellon
+
+（已改用数据库MD5认证方式，相关配置可在cas-server项目下的application.properties中查看和修改）
 
