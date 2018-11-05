@@ -1,5 +1,5 @@
 description 'jerry-sso cas-server'
-version '1.0-SNAPSHOT'
+version = ''
 
 apply plugin: 'java'
 apply plugin: 'idea'

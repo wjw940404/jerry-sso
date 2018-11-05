@@ -14,8 +14,8 @@ function help() {
 	echo "	copy: Copy config from ./etc/cas/config to /etc/cas/config"
 	echo "	clean: Clean build directory"
 	echo "	package: Clean and build CAS war, also call copy"
-	echo "	run: Build and run cas.war via Spring Boot (java -jar build/libs/cas-server-1.0-SNAPSHOT.war)"
-	echo "	runalone: Build and run cas.war on its own (build/libs/cas-server-1.0-SNAPSHOT.war)"
+	echo "	run: Build and run cas.war via Spring Boot (java -jar build/libs/cas-server.war)"
+	echo "	runalone: Build and run cas.war on its own (build/libs/cas-server.war)"
 	echo "	debug: Run CAS.war and listen for Java debugger on port 5005"
 	echo "	bootrun: Run with the Spring Boot plugin, doesn't work with multiple dependencies"
 	echo "	gencert: Create keystore with SSL certificate in location where CAS looks by default"
@@ -36,15 +36,15 @@ function bootrun() {
 }
 
 function debug() {
-	package && java -Xdebug -Xrunjdwp:transport=dt_socket,address=5005,server=y,suspend=n -jar cas-server/build/libs/cas-server-1.0-SNAPSHOT.war
+	package && java -Xdebug -Xrunjdwp:transport=dt_socket,address=5005,server=y,suspend=n -jar cas-server/build/libs/cas-server.war
 }
 
 function run() {
-	package && java -jar cas-server/build/libs/cas-server-1.0-SNAPSHOT.war
+	package && java -jar cas-server/build/libs/cas-server.war
 }
 
 function runalone() {
-	package && chmod +x cas-server/build/libs/cas-server-1.0-SNAPSHOT.war && cas-server/build/libs/cas-server-1.0-SNAPSHOT.war
+	package && chmod +x cas-server/build/libs/cas-server.war && cas-server/build/libs/cas-server.war
 }
 
 function gencert() {
