@@ -50,16 +50,19 @@ repositories {
 
 dependencies {
     compile "org.apereo.cas:cas-server-webapp${project.appServer}:${project.casVersion}@war"
-
     // 数据库认证相关 start
     compile ("org.apereo.cas:cas-server-support-jdbc:${project.casVersion}") {
-                exclude group:'net.shibboleth.tool'
-            }
+        exclude group:'net.shibboleth.tool'
+    }
     compile "org.apereo.cas:cas-server-support-jdbc-drivers:${project.casVersion}"
+    //    compile ("org.apereo.cas:cas-server-core-authentication:${project.casVersion}") {
+//        exclude group:'net.shibboleth.tool'
+//    }
+//    compile "org.apereo.cas:cas-server-core-authentication-api:${project.casVersion}"
+//    compile "org.apereo.cas:cas-server-core-webflow:${project.casVersion}"
     compile "mysql:mysql-connector-java:${project.'mysql.driver.version'}"
 
     compile 'com.alibaba:fastjson:1.2.35'
-
 }
 
 task copyConfig(type: Copy, description: "Copy CAS configuration over to /etc/cas/config") {
