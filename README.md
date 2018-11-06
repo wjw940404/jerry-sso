@@ -27,7 +27,6 @@ keytool -exportcert -alias cas -keystore D:\jerry\cas-overlay-template\etc\cas\t
 
 二、修改hosts文件（C:\Windows\System32\drivers\etc\hosts），加入下面的配置：
 127.0.0.1        cas.example.org
-127.0.0.1        cas.client.com
 
 三、运行
 
