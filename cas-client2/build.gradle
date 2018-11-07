@@ -29,5 +29,7 @@ dependencies {
 
     compile 'com.alibaba:fastjson:1.2.35'
 
-    compile 'net.unicon.cas:cas-client-autoconfig-support:2.1.0-GA'
+//    compile 'net.unicon.cas:cas-client-autoconfig-support:2.1.0-GA'
+    //使用自定义的cas-client-starter
+    compile project(':cas-client-starter')
 }

@@ -1,6 +1,6 @@
 package com.jerry.sso.client2;
 
-import net.unicon.cas.client.configuration.EnableCasClient;
+import com.jerry.sso.client.configuration.EnableCasClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
