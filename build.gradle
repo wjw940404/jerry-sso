@@ -6,8 +6,9 @@ allprojects{
 
 buildscript {
     repositories {
+        mavenCentral()
         mavenLocal()
-        jcenter()
+//        jcenter()
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${project.springBootVersion}"
